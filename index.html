@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="index-media.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>CreateX</title>
+    <style></style>
+  </head>
+
+  <body>
+    <header class="pg-header">
+      <div class="container">
+        <div class="content">
+          <div class="hamburger" onclick="toggleMenu()">
+            <i
+              id="gamburger"
+              style="font-size: 30px"
+              class="fa-solid fa-bars fa-fade fa-xl"
+            ></i>
+          </div>
+          <a href="./index.html">
+            <img
+              class="head-logo"
+              src="./image/icon/head-logo.svg"
+              width="130"
+              height="22"
+              alt=""
+            />
+          </a>
+          <nav class="head-nav" id="head-nav-responsive">
+            <a href="#reception" class="head-nav_link">About Us</a>
+            <a href="#api" class="head-nav_link">Courses</a>
+            <a href="#events" class="head-nav_link">Events</a>
+            <a href="#blogs" class="head-nav_link">Blog</a>
+            <a href="#" class="head-nav_link">Contacts</a>
+          </nav>
+          <div class="button">
+            <a href="#">
+              <button class="head-btn1" type="button">Get consultation</button>
+            </a>
+            <button class="head-btn2" onclick="openModal('open')" type="button">
+              <img
+                src="./image/icon/Person.svg"
+                width="20"
+                height="20"
+                alt=""
+              />
+              Log in
+            </button>
+            <div id="loginModal" style="display: none">
+              <div class="login-modal_page">
+                <h2 class="login-page_title">Login</h2>
+
+                <div class="modal-form-group">
+                  <p class="login-page_text">
+                    Sign in to your account using email and password provided
+                    during registration.
+                  </p>
+                  <label for="usern" class="modal-login-email">Email</label>
+                  <input
+                    class="user-inp"
+                    name="usern"
+                    type="email"
+                    id="email"
+                    placeholder="Your working email"
+                  />
+
+                    
+                    <div class="modal-login-form-group-password">
+                      <label class="modal-login-email" for="password"
+                      >Password</label
+                    >
+                      <input
+                        class="pass-inp"
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        placeholder="Your password"
+                      />
+                      <button
+                        class="modal-login-form-group-password__button"
+                        onclick="showPassword()"
+                        type="button"
+                      >
+                        Ko'rsat
+                      </button>
+                    </div>
+                  
+
+                  <label class="keep-sign-in"
+                    ><input type="checkbox" checked /> Keep me signed in</label
+                  >
+                  <button class="login-page_smb" type="submit" onclick="submit()">Sumbit</button>
+                  <button class="login-page_close" onclick="closeModal()">
+                    <i
+                      style="font-size: 20px"
+                      class="fa-solid fa-x fa-beat"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="container">
+          <div class="content">
+            <div class="banner-info">
+              <a href="#" class="banner-play">
+                <img
+                  src="./image/icon/play-music.svg"
+                  width="88"
+                  height="88"
+                  alt=""
+                />
+                <h4 class="banner-play_text">Play showreel</h4>
+              </a>
+              <h1 class="banner-title">
+                Enjoy studying with Createx Online Courses
+              </h1>
+              <button class="banner-btn1" type="button">About us</button>
+              <button class="head-btn1" type="button">Get consultation</button>
+            </div>
+            <div class="banner-image">
+              <img
+                style="width: 100%"
+                src="./image/img/banner-img.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <section class="web-info">
+          <div class="container">
+            <div class="content">
+              <div class="info1">
+                <h1 class="info1-ttle">1200</h1>
+                <p class="info-1txt">Students graduated</p>
+              </div>
+              <div class="info1">
+                <h1 class="info1-ttle">84</h1>
+                <p class="info-1txt">Completed courses</p>
+              </div>
+              <div class="info1">
+                <h1 class="info1-ttle">16</h1>
+                <p class="info-1txt">Qualified tutors</p>
+              </div>
+              <div class="info1">
+                <h1 class="info1-ttle">5</h1>
+                <p class="info-1txt">Years of experience</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="reception">
+        <div class="container">
+          <div class="contentx-rc">
+            <div class="reception-img">
+              <img
+                class="rc-image"
+                src="./image/img/reception-img.png"
+                alt=""
+              />
+            </div>
+            <div class="recep-info">
+              <h3 class="recep-subtitle">Who we are</h3>
+              <h1 class="recep-title">Why Createx?</h1>
+              <div class="navbar">
+                <a href="#" class="navbar-link">
+                  <img
+                    src="./image/icon/check.svg"
+                    width="15"
+                    height="14"
+                    alt=""
+                  />
+                  A fermentum in morbi pretium aliquam adipiscing donec tempus.
+                </a>
+                <a href="#" class="navbar-link">
+                  <img
+                    src="./image/icon/check.svg"
+                    width="15"
+                    height="14"
+                    alt=""
+                  />
+                  Vulputate placerat amet pulvinar lorem nisl.
+                </a>
+                <a href="#" class="navbar-link">
+                  <img
+                    src="./image/icon/check.svg"
+                    width="15"
+                    height="14"
+                    alt=""
+                  />
+                  Consequat feugiat habitant gravida quisque elit bibendum id
+                  adipiscing sed.
+                </a>
+                <a href="#" class="navbar-link">
+                  <img
+                    src="./image/icon/check.svg"
+                    width="15"
+                    height="14"
+                    alt=""
+                  />
+                  Etiam duis lobortis in fames ultrices commodo nibh.
+                </a>
+                <a href="#" class="navbar-link" id="navbar-link">
+                  <img
+                    src="./image/icon/check.svg"
+                    width="15"
+                    height="14"
+                    alt=""
+                  />
+                  Tincidunt sagittis neque sem ac eget.
+                </a>
+                <a href="#" class="navbar-link" id="navbar-link">
+                  <img
+                    src="./image/icon/check.svg"
+                    width="15"
+                    height="14"
+                    alt=""
+                  />
+                  Ultricies amet justo et eget quisque purus vulputate dapibus
+                  tortor.
+                </a>
+              </div>
+              <a href="#">
+                <button class="recep-btn" type="button">More about us</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefit">
+        <div class="container">
+          <h3 class="benefit-subtt">Our benefits</h3>
+          <h2 class="benefit-title">That’s how we do it</h2>
+          <div class="content">
+            <a href="#" class="ben1">
+              <img src="./image/icon/Star.svg" width="16" height="16" alt="" />
+              Experienced Tutors
+            </a>
+            <a href="#" class="ben2">
+              <img src="./image/icon/like.svg" width="16" height="16" alt="" />
+              Feedback & Support
+            </a>
+            <a href="#" class="ben2">
+              <img
+                src="./image/icon/Layouts.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+              24/7 Online Library
+            </a>
+            <a href="#" class="ben2">
+              <img src="./image/icon/Chat.svg" width="16" height="16" alt="" />
+              Community
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="prac">
+        <div class="container">
+          <div class="contentx-rc">
+            <div class="prac-text">
+              <h1 class="prac-title">Only practicing tutors</h1>
+              <p class="prac-txt">
+                Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames
+                dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis
+                mollis augue. Nunc, sodales tortor sit diam mi amet massa.
+                Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id
+                dignissim massa ut amet. Amet enim, nisi tempus vehicula.
+              </p>
+            </div>
+            <div class="prac-img">
+              <img class="prac-image" src="./image/img/ben-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="events" class="events">
+        <div class="container">
+          <h3 class="events-subtitle">Our Events</h3>
+          <h1 class="events-title">Lectures & workshops</h1>
+          <div class="event-boxs">
+            <div class="event-box1">
+              <div class="left-sc">
+                <h1 class="left-sc_num">05</h1>
+                <div class="ttt">
+                  <h4 class="left-sc_ttle">August</h4>
+                  <p class="left-sc_text">11:00 – 14:00</p>
+                </div>
+              </div>
+              <div class="midd-sc">
+                <h3 class="midd-sc_title">
+                  Formation of the organizational structure of the company in
+                  the face of uncertainty.
+                </h3>
+                <p class="midd-sc_text">Onine master-class</p>
+              </div>
+              <a href="#">
+                <button class="right-btn" type="button">View more</button>
+              </a>
+            </div>
+            <div class="event-box2">
+              <div class="left-sc">
+                <h1 class="left-sc_num">24</h1>
+                <div class="ttt">
+                  <h4 class="left-sc_ttle">July</h4>
+                  <p class="left-sc_text">11:00 – 12:30</p>
+                </div>
+              </div>
+              <div class="midd-sc">
+                <h3 class="midd-sc_title">
+                  Building a customer service department. Best
+                  Practices.Customer service
+                </h3>
+                <p class="midd-sc_text">Onine lecture</p>
+              </div>
+              <a href="#">
+                <button class="right-btn" type="button">View more</button>
+              </a>
+            </div>
+            <div class="event-box1">
+              <div class="left-sc">
+                <h1 class="left-sc_num">16</h1>
+                <div class="ttt">
+                  <h4 class="left-sc_ttle">July</h4>
+                  <p class="left-sc_text">11:00 – 13:00</p>
+                </div>
+              </div>
+              <div class="midd-sc">
+                <h3 class="midd-sc_title">
+                  How to apply methods of speculative design in practice.
+                  Worldbuilding prototyping.
+                </h3>
+                <p class="midd-sc_text">Onine workshop</p>
+              </div>
+              <a href="#">
+                <button class="right-btn" type="button">View more</button>
+              </a>
+            </div>
+          </div>
+          <div class="event-bottom">
+            <h1 class="event-bottom_title">Do you want more?</h1>
+            <a href="#">
+              <button class="event-bottom_btn" type="button">
+                Explore all events
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="container">
+          <div class="team-top">
+            <h5 class="team-subtitle">Best tutors are all here</h5>
+            <h1 class="team-title">Meet our team</h1>
+          </div>
+
+          <div class="team-content">
+            <div class="team-box1">
+              <img class="team-box1_img" src="./image/img/api3.png" alt="" />
+              <h2 class="team-box1_title">Dianne Russell</h2>
+              <p class="team-box1_text">Founder and CEO</p>
+            </div>
+            <div class="team-box1">
+              <img class="team-box1_img" src="./image/img/api1.png" alt="" />
+              <h2 class="team-box1_title">Jerome Bell</h2>
+              <p class="team-box1_text">Founder and Program Director</p>
+            </div>
+            <div class="team-box1">
+              <img class="team-box1_img" src="./image/img/api5.png" alt="" />
+              <h2 class="team-box1_title">Kristin Watson</h2>
+              <p class="team-box1_text">
+                Marketer, Curator of Marketing Course
+              </p>
+            </div>
+            <div class="team-box1">
+              <img class="team-box1_img" src="./image/img/api4.png" alt="" />
+              <h2 class="team-box1_title">Marvin McKinney</h2>
+              <p class="team-box1_text">PM, Curator of Management Course</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="latest-posts">
+        <div class="container">
+          <h6 class="latest-posts__ourblog">OUR BLOG</h6>
+          <div class="flex-between">
+            <h1 class="section-title">Latest posts</h1>
+            <button class="latest-posts__blog-link">Go to blog</button>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="container">
+          <h3 class="subs-subtitle">Don’t miss anything</h3>
+          <h1 class="subs-title">
+            Subscribe to the Createx School announcements
+          </h1>
+          <div class="input-sum">
+            <input
+              class="input-sum_txt"
+              type="email"
+              name="email"
+              placeholder="Your working email"
+              id=""
+            />
+            <button class="input-sum_btn" type="submit">Subscribe</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="pg-footer">
+      <div class="container">
+        <div class="contentx">
+          <div class="foot-1">
+            <a href="./index.html">
+              <img
+                class="foot-logo"
+                src="./image/icon/logo.svg"
+                width="130"
+                height="22"
+                alt=""
+              />
+            </a>
+            <p class="foot-1_text">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships and employment
+              in the largest companies in the country.
+            </p>
+            <a href="#" class="foot-1_socials">
+              <img
+                class="foot-1_socials-img"
+                src="./image/icon/socials.svg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="sit-map">
+            <h2 class="sit-map_ttle">SITE MAP</h2>
+            <a href="#" class="sit-map_text">About Us</a>
+            <a href="#" class="sit-map_text">Courses</a>
+            <a href="#" class="sit-map_text">Events</a>
+            <a href="#" class="sit-map_text">Blog</a>
+            <a href="" class="sit-map_text"><span>Contacts</span></a>
+          </div>
+          <div class="courses">
+            <h2 class="courses-ttle">COURSES</h2>
+            <a href="#" class="courses_text">Marketing</a>
+            <a href="#" class="courses_text">Management</a>
+            <a href="#" class="courses_text">HR & Recruting</a>
+            <a href="#" class="courses_text">Design</a>
+            <a href="" class="courses_text"><span>Development</span></a>
+          </div>
+          <div class="contact-us">
+            <h2 class="contact-title">contact us</h2>
+            <a href="#" class="contact-text">
+              <img src="./image/icon/iPhone.svg" alt="" />
+              (405) 555-0128
+            </a>
+            <a href="#" class="contact-text">
+              <img src="./image/icon/Mail.svg" alt="" />
+              hello@createx.com
+            </a>
+          </div>
+          <div class="sign-up">
+            <h2 class="sign-up_title">SIGN UP TO OUR NEWSLETTER</h2>
+            <input
+              class="sign-up_inp"
+              type="email"
+              name="email"
+              id="email1"
+              placeholder="Email address"
+            />
+            <p class="sign-up_text">
+              *Subscribe to our newsletter to receive communications and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="container">
+          <div class="content">
+            <h5 class="faq-title">
+              © All rights reserved.Made with
+              <span class="faq-title_spn"
+                ><img
+                  src="./image/icon/Heart.svg"
+                  width="16"
+                  height="16"
+                  alt=""
+                />by Createx Studio
+              </span>
+            </h5>
+            <a class="faq-text" href="#">GO TO TOP</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="createx.js"></script>
+  </body>
+</html>
