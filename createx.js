@@ -109,6 +109,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// function submit() {
+//   const data = {
+//     email: emailInput.value,
+//     password: passwordInput.value,
+//   };
+
+//   const url = "https://studyin-uzbekistan.uz/api/v1/common/auth/login/";
+
+//   fetch(url, {
+//     method: "POST",
+//     headers: {
+//       "x-api-key": "reqres-free-v1",
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((res) => res.json().then((json) => ({ ok: res.ok, json })))
+//     .then(({ ok, json }) => {
+//       console.log(json);
+//       if (!ok) {
+//         alert("Xatolik: " + json.error);
+//       } else {
+//         localStorage.setItem("token", json.access);
+//         getUser();
+//       }
+//     });
+// }
+
 function submit() {
   const data = {
     email: emailInput.value,
@@ -125,17 +153,27 @@ function submit() {
     },
     body: JSON.stringify(data),
   })
-    .then((res) => res.json().then((json) => ({ ok: res.ok, json })))
+    .then((res) =>
+      res
+        .json()
+        .then((json) => ({ ok: res.ok, json }))
+        .catch(() => ({ ok: false, json: { error: "Maʼlumotni o‘qib bo‘lmadi" } }))
+    )
     .then(({ ok, json }) => {
       console.log(json);
       if (!ok) {
-        alert("Xatolik: " + json.error);
+        alert("Xatolik: " + (json.error || "Nomaʼlum xatolik yuz berdi"));
       } else {
         localStorage.setItem("token", json.access);
         getUser();
       }
+    })
+    .catch((error) => {
+      console.error("Tarmoq xatosi:", error);
+      alert("Tarmoq xatosi: serverga ulanib bo‘lmadi. Iltimos, keyinroq urinib ko‘ring.");
     });
 }
+
 
 function getUser() {
   const token = localStorage.getItem("token");
